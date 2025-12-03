@@ -1902,12 +1902,6 @@ const scholarshipsData = [
         fields: ["All Fields"],
         applyLink: "https://cuni.cz/UKEN-1.html"
     },
-
-    // ============================================
-    // NEW SCHOLARSHIPS (IDs 73-97) - ADDED DECEMBER 2025
-    // ============================================
-
-    // New USA Scholarships
     {
         id: 73,
         title: "AAUW International Fellowships",
