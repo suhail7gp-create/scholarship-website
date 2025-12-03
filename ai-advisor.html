@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get personalized scholarship recommendations from our AI advisor">
+    <title>AI Scholarship Advisor - Global Scholarship Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4635622374017829"
+         crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Global Scholarship Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="countries.html">By Country</a></li>
+                <li><a href="ai-advisor.html" class="active">AI Advisor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-robot"></i> AI Scholarship Advisor</h1>
+            <p>Get personalized scholarship recommendations powered by AI</p>
+        </div>
+    </section>
+
+    <!-- AI Chat Section -->
+    <section class="ai-chat-section">
+        <div class="container">
+            <div class="ai-chat-container">
+                <div class="ai-info-box">
+                    <h3><i class="fas fa-lightbulb"></i> How It Works</h3>
+                    <ul>
+                        <li>Tell me about your academic background and interests</li>
+                        <li>Share your preferred study destinations</li>
+                        <li>Mention your field of study</li>
+                        <li>I'll recommend the best scholarships for you!</li>
+                    </ul>
+                    <div class="example-questions">
+                        <p><strong>Example questions:</strong></p>
+                        <button class="example-btn" onclick="fillExample('I have a bachelor\'s in Computer Science with a 3.8 GPA. What scholarships can I apply for in USA or Canada for a Master\'s degree?')">
+                            Masters in CS - USA/Canada
+                        </button>
+                        <button class="example-btn" onclick="fillExample('I want to pursue a PhD in Medicine. Which European countries offer fully funded scholarships?')">
+                            PhD in Medicine - Europe
+                        </button>
+                        <button class="example-btn" onclick="fillExample('I\'m interested in undergraduate scholarships for Engineering. What are my options?')">
+                            Undergraduate Engineering
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI Scholarship Advisor. I can help you find the perfect scholarships based on your profile and preferences.</p>
+                                <p>Please tell me about:</p>
+                                <ul>
+                                    <li>Your current education level and field of study</li>
+                                    <li>Your GPA or academic achievements</li>
+                                    <li>Your preferred countries or regions</li>
+                                    <li>What level you want to study (Undergraduate, Masters, PhD)</li>
+                                </ul>
+                                <p>The more details you provide, the better recommendations I can give you!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <textarea 
+                            id="userInput" 
+                            placeholder="Type your question here... (e.g., 'I have a bachelor's in Engineering with 3.5 GPA. What scholarships are available for Masters in USA?')"
+                            rows="3"
+                        ></textarea>
+                        <button id="sendButton" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i> Send
+                        </button>
+                    </div>
+
+                    <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i> AI is thinking...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://whatsapp.com/channel/0029Vb6r2q0DZ4LaYnedsk0v" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Global Scholarship Hub</h3>
+                    <p>Your gateway to global education opportunities.</p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029Vb6r2q0DZ4LaYnedsk0v" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="scholarships.html">All Scholarships</a></li>
+                        <li><a href="countries.html">By Country</a></li>
+                        <li><a href="ai-advisor.html">AI Advisor</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="scholarships.html?level=undergraduate">Undergraduate</a></li>
+                        <li><a href="scholarships.html?level=masters">Masters</a></li>
+                        <li><a href="scholarships.html?level=phd">PhD</a></li>
+                        <li><a href="scholarships.html?level=all">All Levels</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p>Join our WhatsApp channel for daily scholarship updates</p>
+                    <a href="https://whatsapp.com/channel/0029Vb6r2q0DZ4LaYnedsk0v" target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Join Channel
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global Scholarship Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scholarships-data.js"></script>
+    <script src="ai-advisor.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
