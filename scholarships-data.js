@@ -1943,35 +1943,3 @@ const scholarshipsDatabase = [
         featured: false
     }
 ];
-
-// Function to get scholarships by country
-function getScholarshipsByCountry(country) {
-    return scholarshipsData.filter(s => s.country === country);
-}
-
-// Function to get scholarships by level
-function getScholarshipsByLevel(level) {
-    return scholarshipsData.filter(s => s.level.includes(level));
-}
-
-// Function to get scholarships by funding type
-function getScholarshipsByFunding(fundingType) {
-    return scholarshipsData.filter(s => s.funding === fundingType);
-}
-
-// Function to get featured scholarships
-function getFeaturedScholarships() {
-    return scholarshipsData.filter(s => s.featured === true);
-}
-
-// Function to get upcoming deadlines (next 3 months)
-function getUpcomingDeadlines() {
-    const threeMonthsFromNow = new Date();
-    threeMonthsFromNow.setMonth(threeMonthsFromNow.getMonth() + 3);
-    
-    return scholarshipsData.filter(s => {
-        // This is a simplified check - you'd want more sophisticated date parsing
-        return s.deadline.includes('2026') || s.deadline.toLowerCase().includes('rolling');
-    });
-}
-];
