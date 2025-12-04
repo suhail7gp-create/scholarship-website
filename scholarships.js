@@ -107,7 +107,7 @@ function createScholarshipCard(scholarship) {
             </div>
             <p style="margin: 15px 0; color: #666; font-size: 0.9rem;">${scholarship.description}</p>
             <div class="scholarship-footer">
-                <a href="${scholarship.applylink}" target="_blank" class="btn-apply">Apply Now</a>
+                <a href="${scholarship.applyLink}" target="_blank" class="btn-apply">Apply Now</a>
             </div>
         </div>
     `;
