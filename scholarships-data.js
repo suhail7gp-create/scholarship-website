@@ -2,7 +2,7 @@
 // Total Scholarships: 97+ (72 existing + 25 new)
 // Last Updated: December 2025
 
-const scholarshipsData = [
+const scholarshipsDatabase = [
     // ============================================
     // EXISTING 72 SCHOLARSHIPS (IDs 1-72)
     // ============================================
