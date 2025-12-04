@@ -50,6 +50,10 @@ function displayScholarships(scholarships) {
 }
 
 function createScholarshipCard(s) {
+    const applyLink = s.link && s.link.trim() !== ""
+        ? s.link
+        : "https://globalscholarshiphub.org"; // fallback link
+
     return `
         <div class="scholarship-card">
             <div class="scholarship-header">
@@ -68,11 +72,12 @@ function createScholarshipCard(s) {
             <p class="scholarship-desc">${s.description}</p>
 
             <div class="scholarship-footer">
-                <a href="${s.link}" target="_blank" class="btn-apply">Apply Now</a>
+                <a href="${applyLink}" target="_blank" class="btn-apply">Apply Now</a>
             </div>
         </div>
     `;
 }
+
 
 function applyFilters() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
