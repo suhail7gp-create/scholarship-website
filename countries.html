@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse scholarships by country - Find opportunities in your dream destination">
+    <title>Scholarships by Country - Global Scholarship Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4635622374017829"
+         crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Global Scholarship Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="countries.html" class="active">By Country</a></li>
+                <li><a href="ai-advisor.html">AI Advisor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Scholarships by Country</h1>
+            <p>Choose your dream study destination</p>
+        </div>
+    </section>
+
+    <!-- Countries Grid -->
+    <section class="countries-page">
+        <div class="container">
+            <div class="countries-grid-large">
+                <div class="country-card-large" data-country="usa">
+                    <div class="country-flag">🇺🇸</div>
+                    <h3>United States</h3>
+                    <p class="scholarship-count">150+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Fulbright Scholarships</li>
+                        <li><i class="fas fa-check"></i> University Scholarships</li>
+                        <li><i class="fas fa-check"></i> Research Grants</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('USA')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="uk">
+                    <div class="country-flag">🇬🇧</div>
+                    <h3>United Kingdom</h3>
+                    <p class="scholarship-count">120+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Chevening Scholarships</li>
+                        <li><i class="fas fa-check"></i> Commonwealth Scholarships</li>
+                        <li><i class="fas fa-check"></i> University Funding</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('UK')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="canada">
+                    <div class="country-flag">🇨🇦</div>
+                    <h3>Canada</h3>
+                    <p class="scholarship-count">100+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Vanier Scholarships</li>
+                        <li><i class="fas fa-check"></i> Provincial Programs</li>
+                        <li><i class="fas fa-check"></i> University Awards</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Canada')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="australia">
+                    <div class="country-flag">🇦🇺</div>
+                    <h3>Australia</h3>
+                    <p class="scholarship-count">80+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Australia Awards</li>
+                        <li><i class="fas fa-check"></i> Research Training</li>
+                        <li><i class="fas fa-check"></i> University Scholarships</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Australia')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="germany">
+                    <div class="country-flag">🇩🇪</div>
+                    <h3>Germany</h3>
+                    <p class="scholarship-count">90+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> DAAD Scholarships</li>
+                        <li><i class="fas fa-check"></i> Erasmus+ Programs</li>
+                        <li><i class="fas fa-check"></i> Research Fellowships</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Germany')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="netherlands">
+                    <div class="country-flag">🇳🇱</div>
+                    <h3>Netherlands</h3>
+                    <p class="scholarship-count">60+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Holland Scholarships</li>
+                        <li><i class="fas fa-check"></i> Orange Tulip</li>
+                        <li><i class="fas fa-check"></i> University Grants</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Netherlands')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="sweden">
+                    <div class="country-flag">🇸🇪</div>
+                    <h3>Sweden</h3>
+                    <p class="scholarship-count">50+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Swedish Institute</li>
+                        <li><i class="fas fa-check"></i> University Scholarships</li>
+                        <li><i class="fas fa-check"></i> Research Funding</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Sweden')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="norway">
+                    <div class="country-flag">🇳🇴</div>
+                    <h3>Norway</h3>
+                    <p class="scholarship-count">40+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Quota Scheme</li>
+                        <li><i class="fas fa-check"></i> Research Council</li>
+                        <li><i class="fas fa-check"></i> University Programs</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Norway')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="france">
+                    <div class="country-flag">🇫🇷</div>
+                    <h3>France</h3>
+                    <p class="scholarship-count">70+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Eiffel Excellence</li>
+                        <li><i class="fas fa-check"></i> Campus France</li>
+                        <li><i class="fas fa-check"></i> Erasmus Programs</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('France')">View Scholarships</button>
+                </div>
+
+                <div class="country-card-large" data-country="switzerland">
+                    <div class="country-flag">🇨🇭</div>
+                    <h3>Switzerland</h3>
+                    <p class="scholarship-count">45+ Scholarships Available</p>
+                    <ul class="country-features">
+                        <li><i class="fas fa-check"></i> Swiss Government</li>
+                        <li><i class="fas fa-check"></i> ETH Scholarships</li>
+                        <li><i class="fas fa-check"></i> University Excellence</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="loadCountryScholarships('Switzerland')">View Scholarships</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Country Scholarships -->
+    <section class="country-scholarships" id="countryScholarshipsSection" style="display: none;">
+        <div class="container">
+            <h2 id="countryTitle"></h2>
+            <div class="scholarship-grid" id="countryScholarshipsGrid"></div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://whatsapp.com/channel/0029Vb6r2q0DZ4LaYnedsk0v" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Global Scholarship Hub</h3>
+                    <p>Your gateway to global education opportunities.</p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029Vb6r2q0DZ4LaYnedsk0v" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="scholarships.html">All Scholarships</a></li>
+                        <li><a href="countries.html">By Country</a></li>
+                        <li><a href="ai-advisor.html">AI Advisor</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="scholarships.html?level=undergraduate">Undergraduate</a></li>
+                        <li><a href="scholarships.html?level=masters">Masters</a></li>
+                        <li><a href="scholarships.html?level=phd">PhD</a></li>
+                        <li><a href="scholarships.html?level=all">All Levels</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p>Join our WhatsApp channel for daily scholarship updates</p>
+                    <a href="https://whatsapp.com/channel/0029Vb6r2q0DZ4LaYnedsk0v" target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Join Channel
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global Scholarship Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scholarships-data.js"></script>
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
