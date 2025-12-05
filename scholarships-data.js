@@ -738,7 +738,6 @@ const scholarshipsDatabase = [
         benefits: ["Full or partial tuition waiver + monthly stipend"],
         link: "https://studyindenmark.dk/",
         eligibility: "Non-EU/EEA students"
-        eligibility: "Non-EU/EEA students"
     },
     
     // NEW SCHOLARSHIPS FOR 2025-2027 - ONGOING APPLICATIONS
